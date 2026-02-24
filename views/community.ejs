@@ -1,0 +1,32 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+  <section class="mb-10">
+    <h1 class="text-4xl font-bold gold-text">Community</h1>
+    <p class="mt-3 text-gray-300">Join traders, mentors, and live sessions from Calicut, Calicut, and Kerala to accelerate forex skill growth.</p>
+  </section>
+
+  <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <% [
+      ['Telegram Group', 'Real-time chat and idea sharing with global traders.'],
+      ['Discord Server', 'Structured channels for setups, journals, and Q&A.'],
+      ['Live Trading Sessions', 'Session breakdowns with live chart commentary.'],
+      ['Webinars', 'Weekly strategy classes and market reviews.'],
+      ['Trade Reviews', 'Get feedback on entries, exits, and risk execution.']
+    ].forEach((item) => { %>
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h2 class="text-xl font-semibold gold-text"><%= item[0] %></h2>
+        <p class="mt-3 text-sm text-gray-300"><%= item[1] %></p>
+        <% if (item[0] === 'Webinars') { %>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSccHQnITL230joQ2sbhngGhtNJunkl3C8OhIN7tTSrtGbmp9Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mt-5 inline-block text-sm text-dpGreen">Join Webinar -></a>
+        <% } else { %>
+          <a href="/contact?leadType=community_join&sourcePage=%2Fcommunity" class="mt-5 inline-block text-sm text-dpGreen">Join Now -></a>
+        <% } %>
+      </article>
+    <% }) %>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+

@@ -1,0 +1,27 @@
+{
+  "name": "dollarport-edu",
+  "version": "1.0.0",
+  "description": "DollarPort Edu Forex Education Platform website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "forex",
+    "education",
+    "express",
+    "ejs",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemailer": "^8.0.1"
+  },
+  "devDependencies": {
+    "vercel": "^50.22.1"
+  }
+}

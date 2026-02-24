@@ -1,0 +1,30 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 pt-8">
+  <section class="panel">
+    <h1 class="text-4xl font-bold gold-text">Contact / Enroll</h1>
+    <p class="mt-3 text-gray-300">Start your DollarPort Edu learning journey in Calicut, Kerala, or request forex course placement support.</p>
+    <p class="mt-2 text-sm text-gray-400">Address: Near HP Petrol Pambu, Near Hilite Mall, Poovangal, Calicut</p>
+
+    <form id="contactForm" action="/leads" method="POST" class="mt-6 grid gap-4" data-lead-form>
+      <input type="hidden" name="leadType" value="<%= selectedLeadType || 'course_enrollment' %>" />
+      <input type="hidden" name="sourcePage" value="<%= sourcePage || '/contact' %>" />
+      <input type="hidden" name="utmSource" value="" />
+      <input type="hidden" name="utmMedium" value="" />
+      <input type="hidden" name="utmCampaign" value="" />
+      <input class="terminal-input" type="text" name="name" placeholder="Name" required />
+      <input class="terminal-input" type="email" name="email" placeholder="Email" required />
+      <input class="terminal-input" type="tel" name="phone" placeholder="Phone" required />
+      <select class="terminal-input" name="courseInterest" required>
+        <option value="" <%= (typeof selectedCourse === 'undefined' || !selectedCourse) ? 'selected' : '' %>>Course Interest</option>
+        <option value="Online Session" <%= selectedCourse === 'Online Session' ? 'selected' : '' %>>Online Session</option>
+        <option value="Residential Campus" <%= selectedCourse === 'Residential Campus' ? 'selected' : '' %>>Residential Campus</option>
+      </select>
+      <button class="btn-gold py-3 text-xs uppercase tracking-wider" type="submit">Submit Enrollment</button>
+    </form>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+

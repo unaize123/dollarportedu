@@ -1,0 +1,77 @@
+<section id="siteLoader" class="site-loader" aria-label="Loading">
+  <div class="site-loader-inner">
+    <p class="site-loader-kicker dp-wordmark">DOLLARPORT EDU</p>
+    <h2 class="site-loader-title">Welcome to the World of Forex</h2>
+    <div class="site-loader-ring" aria-hidden="true">
+      <span class="site-loader-ring-core">$  EUR  JPY  GBP  USD</span>
+    </div>
+    <div class="site-loader-candles" aria-hidden="true">
+      <span class="loader-candle up"></span>
+      <span class="loader-candle down"></span>
+      <span class="loader-candle up"></span>
+      <span class="loader-candle up"></span>
+      <span class="loader-candle down"></span>
+      <span class="loader-candle up"></span>
+      <span class="loader-candle down"></span>
+      <span class="loader-candle up"></span>
+    </div>
+    <p class="site-loader-sub">Preparing live market environment...</p>
+  </div>
+</section>
+<nav class="sticky top-0 z-50 border-b border-dpGold/20 backdrop-blur-lg bg-black/85">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-20 items-center justify-between">
+      <a href="/" class="brand-logo">
+        <img src="/images/dollarport-logo.png?v=4" alt="DollarPort Edu Logo" class="brand-logo-img" />
+        <span class="brand-logo-text">DOLLARPORT EDU</span>
+      </a>
+
+      <button id="menuBtn" class="md:hidden rounded border border-dpGold/50 px-3 py-1 text-dpLightGold" aria-label="Toggle Menu">
+        Menu
+      </button>
+
+      <ul id="menu" class="hidden md:flex md:items-center md:gap-6 text-sm font-medium">
+        <li><a class="nav-link <%= page === 'home' ? 'active-link' : '' %>" href="/">Home</a></li>
+        <li><a class="nav-link <%= page === 'forex-market' ? 'active-link' : '' %>" href="/forex-market">Forex Market</a></li>
+        <li><a class="nav-link <%= page === 'courses' ? 'active-link' : '' %>" href="/courses">Courses</a></li>
+        <li><a class="nav-link <%= page === 'simulation' ? 'active-link' : '' %>" href="/simulation">Simulation</a></li>
+        <li><a class="nav-link <%= page === 'tools' ? 'active-link' : '' %>" href="/tools">Tools</a></li>
+        <li><a class="nav-link <%= page === 'insights' ? 'active-link' : '' %>" href="/insights">Insights</a></li>
+        <li><a class="nav-link <%= page === 'broker-guide' ? 'active-link' : '' %>" href="/broker-guide">Broker Guide</a></li>
+        <li><a class="nav-link <%= page === 'community' ? 'active-link' : '' %>" href="/community">Community</a></li>
+        <li><a class="btn-gold px-4 py-2 text-xs uppercase tracking-wider" href="https://docs.google.com/forms/d/e/1FAIpQLSccHQnITL230joQ2sbhngGhtNJunkl3C8OhIN7tTSrtGbmp9Q/viewform?usp=header" target="_blank" rel="noopener noreferrer">Register</a></li>
+      </ul>
+    </div>
+
+    <ul id="mobileMenu" class="hidden md:hidden pb-4 space-y-2 text-sm">
+      <li><a class="nav-link block" href="/">Home</a></li>
+      <li><a class="nav-link block" href="/forex-market">Forex Market</a></li>
+      <li><a class="nav-link block" href="/courses">Courses</a></li>
+      <li><a class="nav-link block" href="/simulation">Simulation</a></li>
+      <li><a class="nav-link block" href="/tools">Tools</a></li>
+      <li><a class="nav-link block" href="/insights">Insights</a></li>
+      <li><a class="nav-link block" href="/broker-guide">Broker Guide</a></li>
+      <li><a class="nav-link block" href="/community">Community</a></li>
+      <li><a class="btn-gold inline-block px-4 py-2 text-xs uppercase tracking-wider" href="https://docs.google.com/forms/d/e/1FAIpQLSccHQnITL230joQ2sbhngGhtNJunkl3C8OhIN7tTSrtGbmp9Q/viewform?usp=header" target="_blank" rel="noopener noreferrer">Register</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="market-strip" aria-label="Live Market Updates">
+  <div class="market-strip-track">
+    <span class="market-label">Live Market Updates</span>
+    <span class="market-item" data-symbol="EURUSD">EUR/USD <b data-price="EURUSD">1.0842</b></span>
+    <span class="market-item" data-symbol="GBPUSD">GBP/USD <b data-price="GBPUSD">1.2710</b></span>
+    <span class="market-item" data-symbol="USDJPY">USD/JPY <b data-price="USDJPY">149.22</b></span>
+    <span class="market-item" data-symbol="XAUUSD">XAU/USD <b data-price="XAUUSD">2034.5</b></span>
+    <span class="market-item" data-symbol="USDCHF">USD/CHF <b data-price="USDCHF">0.8820</b></span>
+    <span class="market-item" data-symbol="AUDUSD">AUD/USD <b data-price="AUDUSD">0.6624</b></span>
+    <span class="market-label">Live Market Updates</span>
+    <span class="market-item" data-symbol="EURUSD">EUR/USD <b data-price="EURUSD">1.0842</b></span>
+    <span class="market-item" data-symbol="GBPUSD">GBP/USD <b data-price="GBPUSD">1.2710</b></span>
+    <span class="market-item" data-symbol="USDJPY">USD/JPY <b data-price="USDJPY">149.22</b></span>
+    <span class="market-item" data-symbol="XAUUSD">XAU/USD <b data-price="XAUUSD">2034.5</b></span>
+    <span class="market-item" data-symbol="USDCHF">USD/CHF <b data-price="USDCHF">0.8820</b></span>
+    <span class="market-item" data-symbol="AUDUSD">AUD/USD <b data-price="AUDUSD">0.6624</b></span>
+  </div>
+</section>
+

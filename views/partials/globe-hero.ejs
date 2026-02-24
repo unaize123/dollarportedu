@@ -1,0 +1,57 @@
+<section class="hero-shell relative overflow-hidden rounded-3xl border border-dpGold/30 p-8 sm:p-12 globe-wrap">
+  <div class="fx-scanline" aria-hidden="true"></div>
+  <div class="hero-candle-field" aria-hidden="true">
+    <span class="hero-candle up"></span>
+    <span class="hero-candle down"></span>
+    <span class="hero-candle up"></span>
+    <span class="hero-candle up"></span>
+    <span class="hero-candle down"></span>
+    <span class="hero-candle up"></span>
+    <span class="hero-candle down"></span>
+    <span class="hero-candle up"></span>
+    <span class="hero-candle down"></span>
+    <span class="hero-candle up"></span>
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-dpGold/10 via-transparent to-dpGreen/10"></div>
+  <div class="hero-content relative z-10 max-w-3xl pr-16 sm:pr-24 lg:pr-10">
+    <p class="text-xs uppercase tracking-[0.35em] text-dpGreen"><%= tag || 'DollarPort Edu Forex Education' %></p>
+    <h1 class="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
+      <span class="gold-text"><%= titleText %></span>
+    </h1>
+    <p class="mt-5 text-lg text-gray-300"><%= subText %></p>
+    <% if (buttons && buttons.length) { %>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <% buttons.forEach((btn) => { %>
+          <a href="<%= btn.href %>" class="<%= btn.secondary ? 'btn-outline' : 'btn-gold' %> px-5 py-3 text-sm uppercase tracking-wider"><%= btn.label %></a>
+        <% }); %>
+      </div>
+    <% } %>
+  </div>
+  <div class="liquidity-canvas-wrap" aria-hidden="true">
+    <canvas id="liquidityGlobe" width="320" height="320"></canvas>
+  </div>
+  <aside class="liquidity-globe-meta" aria-label="Forex Session Liquidity">
+    <h4>Session Liquidity</h4>
+    <div class="liq-row" data-session-row="0">
+      <span>Sydney</span>
+      <div class="liq-bar"><i data-liq-bar="0" style="--liq: 36%"></i></div>
+      <b data-liq-value="0">36%</b>
+    </div>
+    <div class="liq-row" data-session-row="1">
+      <span>Tokyo</span>
+      <div class="liq-bar"><i data-liq-bar="1" style="--liq: 58%"></i></div>
+      <b data-liq-value="1">58%</b>
+    </div>
+    <div class="liq-row" data-session-row="2">
+      <span>London</span>
+      <div class="liq-bar"><i data-liq-bar="2" style="--liq: 92%"></i></div>
+      <b data-liq-value="2">92%</b>
+    </div>
+    <div class="liq-row" data-session-row="3">
+      <span>New York</span>
+      <div class="liq-bar"><i data-liq-bar="3" style="--liq: 84%"></i></div>
+      <b data-liq-value="3">84%</b>
+    </div>
+  </aside>
+</section>
+

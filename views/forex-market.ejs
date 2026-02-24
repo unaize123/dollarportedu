@@ -1,0 +1,46 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+  <%- include('partials/globe-hero', {
+    tag: 'Market Structure',
+    titleText: 'Forex Market Intelligence',
+    subText: 'Understand how the global FX market moves, with practical forex training in Calicut, Kerala focused on liquidity and opportunity mapping.',
+    buttons: [{ label: 'View Courses', href: '/courses' }]
+  }) %>
+
+  <section class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <% [
+      {
+        title: 'What is Forex Trading',
+        body: 'Forex is the global exchange of one currency for another. Traders seek opportunities from price movement between currency pairs.'
+      },
+      {
+        title: 'Currency Pairs',
+        body: 'Major, minor, and exotic pairs each have different spread behavior and volatility profiles. Pair selection impacts strategy performance.'
+      },
+      {
+        title: 'Market Sessions',
+        body: 'Sydney, Tokyo, London, and New York sessions shape liquidity. Overlap periods often provide the strongest directional movement.'
+      },
+      {
+        title: 'Liquidity & Volatility',
+        body: 'Liquidity improves execution quality while volatility creates opportunity and risk. Strong risk rules are essential during high-impact events.'
+      },
+      {
+        title: 'Market Participants',
+        body: 'Banks, institutions, hedge funds, corporations, and retail traders all contribute to order flow and market structure changes.'
+      }
+    ].forEach((topic) => { %>
+      <article class="glass-card rounded-2xl border border-dpGold/20 p-6 relative overflow-hidden">
+        <div class="globe globe-mini" aria-hidden="true"></div>
+        <h2 class="text-xl font-semibold gold-text relative z-10"><%= topic.title %></h2>
+        <p class="mt-3 text-sm text-gray-300 relative z-10"><%= topic.body %></p>
+      </article>
+    <% }) %>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
+

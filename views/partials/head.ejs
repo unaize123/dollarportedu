@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%
+    const resolvedTitle = (typeof title !== 'undefined' && title) ? title : 'DollarPort Edu | Forex Education Platform';
+    const resolvedDescription = (typeof metaDescription !== 'undefined' && metaDescription)
+      ? metaDescription
+      : ((typeof defaultMetaDescription !== 'undefined' && defaultMetaDescription) ? defaultMetaDescription : 'DollarPort Edu forex education platform.');
+    const resolvedKeywords = (typeof metaKeywords !== 'undefined' && metaKeywords)
+      ? metaKeywords
+      : ((typeof defaultMetaKeywords !== 'undefined' && defaultMetaKeywords) ? defaultMetaKeywords : 'forex education, forex courses');
+    const resolvedSiteUrl = (typeof siteUrl !== 'undefined' && siteUrl) ? siteUrl : '';
+    const resolvedPath = (typeof currentPath !== 'undefined' && currentPath) ? currentPath : '/';
+    const canonicalUrl = resolvedSiteUrl ? `${resolvedSiteUrl}${resolvedPath}` : '';
+    const ogImage = resolvedSiteUrl ? `${resolvedSiteUrl}/images/dollarport-logo.png` : '/images/dollarport-logo.png';
+    const robotsContent = (typeof noIndex !== 'undefined' && noIndex) ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+    const jsonLd = (typeof seoJsonLd !== 'undefined' && seoJsonLd) ? seoJsonLd : ((typeof defaultSeoJsonLd !== 'undefined') ? defaultSeoJsonLd : null);
+  %>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= resolvedTitle %></title>
+  <meta name="description" content="<%= resolvedDescription %>" />
+  <meta name="keywords" content="<%= resolvedKeywords %>" />
+  <meta name="robots" content="<%= robotsContent %>" />
+  <% if (canonicalUrl) { %><link rel="canonical" href="<%= canonicalUrl %>" /><% } %>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DollarPort Edu" />
+  <meta property="og:title" content="<%= resolvedTitle %>" />
+  <meta property="og:description" content="<%= resolvedDescription %>" />
+  <meta property="og:image" content="<%= ogImage %>" />
+  <% if (canonicalUrl) { %><meta property="og:url" content="<%= canonicalUrl %>" /><% } %>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= resolvedTitle %>" />
+  <meta name="twitter:description" content="<%= resolvedDescription %>" />
+  <meta name="twitter:image" content="<%= ogImage %>" />
+
+  <% if (jsonLd) { %>
+    <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+  <% } %>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dpGold: '#D4AF37',
+            dpDeepGold: '#B8962E',
+            dpLightGold: '#F2D16B',
+            dpGreen: '#00FF9C',
+            dpBlack: '#000000',
+            dpCard: '#111111'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script defer src="/js/main.js"></script>
+</head>
+<body class="text-white bg-black">
+

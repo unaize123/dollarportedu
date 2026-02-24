@@ -1,0 +1,20 @@
+<article class="glass-card p-6 rounded-2xl border border-dpGold/20 hover:border-dpGold/45 transition <%= featured ? 'course-highlight' : '' %>">
+  <% if (featured) { %>
+    <p class="mb-3 inline-block rounded-full border border-dpGold/40 bg-dpGold/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-dpLightGold">Featured Course</p>
+  <% } %>
+  <h3 class="text-xl font-semibold gold-text"><%= course.title %></h3>
+  <p class="mt-3 text-sm text-gray-300"><%= course.description %></p>
+  <% if (Array.isArray(course.outline) && course.outline.length) { %>
+    <ul class="mt-4 space-y-2 text-sm text-gray-300 list-disc pl-5">
+      <% course.outline.forEach((item) => { %>
+        <li><%= item %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+  <div class="mt-4 flex items-center justify-between text-xs uppercase tracking-widest text-gray-400">
+    <span><%= course.duration %></span>
+    <span class="text-dpGreen"><%= course.level %></span>
+  </div>
+  <a href="/contact?course=<%= encodeURIComponent(course.title) %>&leadType=course_enrollment&sourcePage=%2Fcourses" class="btn-gold mt-5 inline-block px-4 py-2 text-xs uppercase tracking-wider">Enroll</a>
+</article>
+

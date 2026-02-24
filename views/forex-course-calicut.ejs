@@ -1,0 +1,93 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+  <section class="mb-10">
+    <h1 class="text-4xl font-bold gold-text">Forex Trading Course in Calicut, Kerala</h1>
+    <p class="mt-3 text-gray-300">
+      Join DollarPort Edu for forex training in Calicut with offline classroom sessions, online mentorship, and forex course in Malayalam support.
+    </p>
+  </section>
+
+  <section class="grid gap-6 lg:grid-cols-3">
+    <article class="panel lg:col-span-2">
+      <h2 class="text-2xl font-semibold gold-text">Forex Training Details</h2>
+      <p class="mt-4 text-sm text-gray-300">
+        This forex trading course in Calicut covers market structure, technical analysis, smart money concepts, and risk management.
+        Students in Calicut and across Kerala can join in-person batches or online sessions based on availability.
+      </p>
+      <ul class="mt-4 space-y-2 text-sm text-gray-300 list-disc pl-5">
+        <li>Beginner to advanced progression with practical assignments</li>
+        <li>Live chart sessions and review-based mentorship</li>
+        <li>Malayalam + English explanation support</li>
+        <li>Community support and webinar access</li>
+      </ul>
+    </article>
+
+    <article class="panel">
+      <h2 class="text-2xl font-semibold gold-text">Free Forex Trading Webinar in Calicut</h2>
+      <p class="mt-4 text-sm text-gray-300">Next webinar date: <strong>TBD</strong>. Register to receive schedule updates and joining instructions.</p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSccHQnITL230joQ2sbhngGhtNJunkl3C8OhIN7tTSrtGbmp9Q/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gold mt-5 inline-block px-4 py-2 text-xs uppercase tracking-wider"
+      >Register Webinar</a>
+    </article>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-2xl font-semibold gold-text">Classroom Photos</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <div class="panel min-h-[130px] flex items-center justify-center text-xs uppercase tracking-widest text-gray-400">Photo Placeholder 1</div>
+      <div class="panel min-h-[130px] flex items-center justify-center text-xs uppercase tracking-widest text-gray-400">Photo Placeholder 2</div>
+      <div class="panel min-h-[130px] flex items-center justify-center text-xs uppercase tracking-widest text-gray-400">Photo Placeholder 3</div>
+    </div>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-2xl font-semibold gold-text">Student Testimonials</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <article class="panel">
+        <p class="text-sm text-gray-300">"Best forex classes in Calicut for practical learning and clear risk management."</p>
+        <p class="mt-3 text-xs uppercase tracking-widest text-dpLightGold">Student Testimonial Placeholder</p>
+      </article>
+      <article class="panel">
+        <p class="text-sm text-gray-300">"I joined from Calicut and improved my confidence with Malayalam support."</p>
+        <p class="mt-3 text-xs uppercase tracking-widest text-dpLightGold">Student Testimonial Placeholder</p>
+      </article>
+      <article class="panel">
+        <p class="text-sm text-gray-300">"The mentor guidance and live market sessions made this course very practical."</p>
+        <p class="mt-3 text-xs uppercase tracking-widest text-dpLightGold">Student Testimonial Placeholder</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-10 mb-2 panel">
+    <h2 class="text-2xl font-semibold gold-text">Contact for Course Enrollment</h2>
+    <p class="mt-3 text-sm text-gray-300">Submit your details to join our forex training institute in Kerala.</p>
+    <form action="/leads" method="POST" class="mt-5 grid gap-4 md:grid-cols-2" data-lead-form>
+      <input type="hidden" name="leadType" value="course_enrollment" />
+      <input type="hidden" name="sourcePage" value="/forex-course-calicut" />
+      <input type="hidden" name="utmSource" value="" />
+      <input type="hidden" name="utmMedium" value="" />
+      <input type="hidden" name="utmCampaign" value="" />
+      <input class="terminal-input" type="text" name="name" placeholder="Name" required />
+      <input class="terminal-input" type="email" name="email" placeholder="Email" required />
+      <input class="terminal-input" type="tel" name="phone" placeholder="Phone" required />
+      <select class="terminal-input" name="courseInterest" required>
+        <option value="" selected>Course Interest</option>
+        <option value="Beginner Forex Foundations">Beginner Forex Foundations</option>
+        <option value="Technical Analysis">Technical Analysis</option>
+        <option value="Smart Money Concepts">Smart Money Concepts</option>
+        <option value="Risk Management">Risk Management</option>
+        <option value="Advanced Trading Systems">Advanced Trading Systems</option>
+      </select>
+      <button class="btn-gold py-3 text-xs uppercase tracking-wider md:col-span-2" type="submit">Submit Enrollment</button>
+    </form>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+
+

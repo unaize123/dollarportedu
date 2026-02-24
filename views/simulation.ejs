@@ -1,0 +1,70 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+  <section class="relative glass-card border border-dpGold/30 rounded-3xl p-8 overflow-hidden">
+    <div class="globe globe-sim" aria-hidden="true"></div>
+    <h1 class="text-4xl font-bold gold-text relative z-10">Trading Simulation Game</h1>
+    <p class="mt-3 text-gray-300 relative z-10">Practice trading without real money using a live-style decision environment used in our forex classes in Calicut and Kerala mentorship programs.</p>
+
+    <div class="relative z-10 mt-8 grid gap-6 lg:grid-cols-3">
+      <div class="panel">
+        <p class="text-xs uppercase tracking-widest text-gray-400">Virtual Balance</p>
+        <p id="balance" class="mt-2 text-3xl font-bold text-dpGreen">$10,000.00</p>
+        <p class="mt-4 text-xs uppercase tracking-widest text-gray-400">Live Price</p>
+        <p id="livePrice" class="mt-1 text-lg font-semibold text-white">1.08420</p>
+        <p class="mt-2 text-xs text-gray-400">Spread: <span id="spreadInfo" class="text-dpLightGold">1.2 pips</span></p>
+      </div>
+
+      <div class="panel">
+        <label class="text-xs uppercase tracking-widest text-gray-400" for="pair">Currency Pair</label>
+        <select id="pair" class="terminal-input mt-2">
+          <option>EUR/USD</option>
+          <option>GBP/USD</option>
+          <option>USD/JPY</option>
+          <option>XAU/USD</option>
+        </select>
+        <label class="mt-4 block text-xs uppercase tracking-widest text-gray-400" for="lotSize">Position Size (Lots)</label>
+        <input id="lotSize" class="terminal-input mt-2" type="number" min="0.01" max="5" step="0.01" value="0.10" />
+      </div>
+
+      <div class="panel">
+        <p class="text-xs uppercase tracking-widest text-gray-400">Action</p>
+        <div class="mt-2 flex gap-2">
+          <button id="buyBtn" class="btn-gold flex-1 py-2 text-xs uppercase tracking-wider">Buy</button>
+          <button id="sellBtn" class="btn-outline flex-1 py-2 text-xs uppercase tracking-wider">Sell</button>
+        </div>
+        <button id="closeTradeBtn" class="btn-outline mt-3 w-full py-2 text-xs uppercase tracking-wider">Close Trade</button>
+      </div>
+    </div>
+
+    <div class="relative z-10 mt-6 grid gap-6 lg:grid-cols-3">
+      <div class="panel lg:col-span-2">
+        <p class="text-xs uppercase tracking-widest text-gray-400">Candlestick Chart</p>
+        <div class="chart-placeholder mt-4" id="chartArea">
+          <canvas id="simChart" class="sim-chart-canvas"></canvas>
+        </div>
+      </div>
+      <div class="panel">
+        <p class="text-xs uppercase tracking-widest text-gray-400">Open Position</p>
+        <p id="positionInfo" class="mt-2 text-sm text-gray-300">No active trade</p>
+        <div class="mt-3 text-xs text-gray-400 space-y-1">
+          <p>Entry: <span id="entryPrice" class="text-white">-</span></p>
+          <p>Current: <span id="currentPrice" class="text-white">-</span></p>
+          <p>Pips: <span id="pipMove" class="text-dpLightGold">0.0</span></p>
+        </div>
+        <p class="mt-5 text-xs uppercase tracking-widest text-gray-400">Profit / Loss</p>
+        <p id="pnl" class="mt-2 text-3xl font-bold text-gray-100">$0.00</p>
+        <p class="mt-6 text-xs uppercase tracking-widest text-gray-400">Leaderboard</p>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300">
+          <li>#1 AtlasFX - +$2,420</li>
+          <li>#2 WaveTrader - +$1,980</li>
+          <li>#3 GreenPip - +$1,670</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+

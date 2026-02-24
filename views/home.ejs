@@ -1,0 +1,183 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+  <%- include('partials/globe-hero', {
+    tag: 'Forex Education + Industry Access',
+    titleText: 'Gateway to the Global Forex Market',
+    subText: 'Learn Forex. Master Trading. Enter the world\'s largest financial market.',
+    buttons: [
+      { label: 'Explore Forex', href: '/forex-market' },
+      { label: 'View Courses', href: '/courses', secondary: true },
+      { label: 'Try Simulation', href: '/simulation', secondary: true }
+    ]
+  }) %>
+
+  <section class="mt-10 grid gap-4 sm:grid-cols-3">
+    <div class="stat-card"><p class="stat-number">25K+</p><p class="stat-label">Students Trained</p></div>
+    <div class="stat-card"><p class="stat-number">42</p><p class="stat-label">Countries Reached</p></div>
+    <div class="stat-card"><p class="stat-number">120K+</p><p class="stat-label">Trading Hours Practiced</p></div>
+  </section>
+
+  <section class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">About DollarPort</h2>
+      <a href="/contact?leadType=general_inquiry&sourcePage=%2F" class="text-sm text-dpGreen">Connect With Us</a>
+    </div>
+    <div class="mt-6 grid gap-5 lg:grid-cols-2">
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-2xl font-semibold gold-text">What Is DollarPort?</h3>
+        <p class="mt-3 text-sm text-gray-300">
+          DollarPort is a forex education and trading development platform built to help learners understand global currency markets with clarity.
+          We combine structured learning, simulation-based practice, and practical tools so students can move from confusion to confidence.
+        </p>
+        <p class="mt-3 text-sm text-gray-300">
+          Our goal is simple: make forex education professional, accessible, and action-focused for beginners as well as developing traders.
+        </p>
+      </article>
+
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-2xl font-semibold gold-text">Who Are We?</h3>
+        <p class="mt-3 text-sm text-gray-300">
+          We are a team of forex mentors, market analysts, and trading educators working under DollarPort Edu LLP to train the next generation of disciplined traders.
+        </p>
+        <p class="mt-3 text-sm text-gray-300">
+          We focus on risk management, strategy building, and mindset development through mentorship, community support, and real-world market exposure.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">Best Forex Trading Course in Calicut, Kerala</h2>
+      <a href="/forex-course-calicut" class="text-sm text-dpGreen">View Calicut Course Page</a>
+    </div>
+    <div class="mt-6 grid gap-5 lg:grid-cols-2">
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-2xl font-semibold gold-text">Course Overview</h3>
+        <p class="mt-3 text-sm text-gray-300">
+          DollarPort Edu offers a forex trading course in Calicut designed for beginners and aspiring professionals.
+          Our forex training in Calicut combines live market education, chart-based strategy, and risk-focused execution.
+        </p>
+        <p class="mt-3 text-sm text-gray-300">
+          This forex course in Calicut includes both offline classroom training and online learning sessions for flexible progress.
+          We also provide forex course in Malayalam support for students who prefer local-language guidance.
+        </p>
+      </article>
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-2xl font-semibold gold-text">Benefits & Who Can Join</h3>
+        <p class="mt-3 text-sm text-gray-300">
+          Learners gain practical trade planning, discipline frameworks, and mentorship from one of the best forex mentor teams in Calicut.
+          This is suitable for students, working professionals, business owners, and anyone seeking structured forex classes in Calicut.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-gray-300 list-disc pl-5">
+          <li>Offline + online forex training options in Calicut, Kerala</li>
+          <li>Malayalam and English support based on learner comfort</li>
+          <li>Simulation, tools, and performance review guidance</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">Platform Features</h2>
+      <a href="/contact?leadType=course_enrollment&sourcePage=%2F" class="text-sm text-dpGreen">Start Learning</a>
+    </div>
+    <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <% ['Forex Courses','Trading Simulation','Market Insights','Trading Tools','Broker Guides','Community Access'].forEach((feature) => { %>
+        <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+          <div class="h-10 w-10 rounded-full icon-gold"></div>
+          <h3 class="mt-4 text-xl font-semibold"><%= feature %></h3>
+          <p class="mt-2 text-sm text-gray-300">Premium, practical resources to accelerate your journey in global currency markets.</p>
+        </article>
+      <% }); %>
+    </div>
+  </section>
+
+  <section class="mt-16 mb-4">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">Journey of a Trader</h2>
+      <span class="text-xs uppercase tracking-[0.2em] text-dpGreen">Step by Step</span>
+    </div>
+    <p class="mt-3 max-w-3xl text-sm text-gray-300">Follow a practical progression from first market exposure to consistent trading discipline.</p>
+
+    <div class="journey-track mt-8">
+      <article class="journey-step">
+        <span class="journey-dot"></span>
+        <p class="journey-kicker">Phase 01</p>
+        <h3 class="journey-title">Learn the Market</h3>
+        <p class="journey-copy">Understand forex structure, major sessions, and how currency pairs behave.</p>
+      </article>
+
+      <article class="journey-step">
+        <span class="journey-dot"></span>
+        <p class="journey-kicker">Phase 02</p>
+        <h3 class="journey-title">Build a Strategy</h3>
+        <p class="journey-copy">Develop a repeatable plan using technical analysis and risk-first rules.</p>
+      </article>
+
+      <article class="journey-step">
+        <span class="journey-dot"></span>
+        <p class="journey-kicker">Phase 03</p>
+        <h3 class="journey-title">Practice in Simulation</h3>
+        <p class="journey-copy">Train decisions with virtual capital before exposing real funds.</p>
+      </article>
+
+      <article class="journey-step">
+        <span class="journey-dot"></span>
+        <p class="journey-kicker">Phase 04</p>
+        <h3 class="journey-title">Review and Scale</h3>
+        <p class="journey-copy">Track performance, fix weak spots, and scale with controlled consistency.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">Industry Gateway</h2>
+      <a href="/broker-guide" class="text-sm text-dpGreen">Explore Industry Paths</a>
+    </div>
+    <p class="mt-3 max-w-3xl text-sm text-gray-300">DollarPort Edu connects education with real industry pathways, from broker selection to community mentorship and trading infrastructure.</p>
+    <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ['Broker Selection', 'Compare execution models and platform options.', '/broker-guide'],
+        ['Live Communities', 'Join sessions, webinars, and trader feedback loops.', '/community'],
+        ['Market Intelligence', 'Track daily analysis and weekly setup plans.', '/insights'],
+        ['Trading Toolkit', 'Use calculators for lot size, risk, and P/L planning.', '/tools']
+      ].forEach((item) => { %>
+        <article class="glass-card p-5 rounded-2xl border border-dpGold/20">
+          <h3 class="text-lg font-semibold gold-text"><%= item[0] %></h3>
+          <p class="mt-2 text-sm text-gray-300"><%= item[1] %></p>
+          <a href="<%= item[2] %>" class="mt-4 inline-block text-sm text-dpGreen">Open -></a>
+        </article>
+      <% }) %>
+    </div>
+  </section>
+
+  <section class="mt-16 mb-2">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-bold gold-text">Free Forex Trading Webinar in Calicut</h2>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSccHQnITL230joQ2sbhngGhtNJunkl3C8OhIN7tTSrtGbmp9Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="text-sm text-dpGreen">Register Webinar</a>
+    </div>
+    <div class="mt-6 grid gap-5 lg:grid-cols-3">
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-xl font-semibold gold-text">Date</h3>
+        <p class="mt-3 text-sm text-gray-300">Next webinar date: <strong>TBD</strong> (update with your schedule).</p>
+      </article>
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-xl font-semibold gold-text">What You Learn</h3>
+        <p class="mt-3 text-sm text-gray-300">Market structure, entry logic, risk rules, and a guided roadmap for forex trading course in Kerala learners.</p>
+      </article>
+      <article class="glass-card p-6 rounded-2xl border border-dpGold/20">
+        <h3 class="text-xl font-semibold gold-text">Why Attend</h3>
+        <p class="mt-3 text-sm text-gray-300">Understand how our forex training institute in Kerala helps beginners move from basics to consistency with mentorship.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+
+

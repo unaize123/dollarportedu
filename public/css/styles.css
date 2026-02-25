@@ -1661,6 +1661,24 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .brand-logo-text {
+    display: none;
+  }
+
+  .hero-shell {
+    padding: 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
   .globe-hero {
     width: 180px;
     height: 180px;
@@ -1735,7 +1753,7 @@ nav {
   }
 
   .market-strip {
-    top: 64px;
+    top: 80px;
   }
 
   .market-strip-track {

@@ -205,6 +205,14 @@ app.use((req, res) => {
   });
 });
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(err.statusCode || 500).json({
+    error: err.message || 'Internal server error'
+  });
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`DollarPort Edu running on http://0.0.0.0:${PORT}`);
 });
